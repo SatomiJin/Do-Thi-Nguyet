@@ -1,0 +1,90 @@
+.contact-container {
+  .row {
+    margin-top: 10vh;
+    .title {
+      font-size: 1.6em;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 3px solid #000;
+    }
+    .contact-me {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      .contact-item {
+        border: 1px solid var(--color-1);
+        width: fit-content;
+        border-radius: 4px;
+        display: flex;
+        gap: 20px;
+        min-width: 300px;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          cursor: pointer;
+        }
+        .contact__icon {
+          //   padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          color: whitesmoke;
+          font-size: larger;
+          font-weight: 700;
+          background-color: var(--color-2);
+        }
+        .contact__text {
+          line-height: 1.5;
+          .contact-title {
+            font-size: 1.1em;
+            font-weight: 700;
+          }
+          .contact-desc {
+            font-weight: 600;
+            color: var(--font-color-1);
+          }
+          a {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--font-color-1);
+            .contact-desc {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .row {
+    .title {
+      text-align: center;
+    }
+    .contact-me {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 739px) {
+  .contact-container {
+    .row {
+      .title {
+        text-align: center;
+      }
+      .contact-me {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

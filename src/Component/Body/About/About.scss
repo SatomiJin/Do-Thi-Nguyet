@@ -1,0 +1,202 @@
+.about-container {
+  .row {
+    padding: 30px 0;
+    .about__title {
+      font-size: 1.6em;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 3px solid #000;
+      text-align: center;
+      padding: 0 0 10px 0;
+    }
+    .about__intro {
+      .row {
+        padding-bottom: 0;
+        .image-intro {
+          .image {
+            background-image: url("../../../Assets/Image/background1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50vh;
+            border-radius: 10px;
+            border: 2px solid #555;
+          }
+        }
+        .description {
+          .header {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 2px 2px 2px #000;
+            text-align: center;
+            color: var(--color-1);
+          }
+          .body {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            .list {
+              list-style-type: none;
+              line-height: 2;
+              //   text-align: center;
+              .list-item {
+                font-size: 1.2em;
+              }
+            }
+          }
+          .footer {
+            text-align: center;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            a {
+              .btn-download-cv {
+                padding: 10px 20px;
+                font-weight: 600;
+                font-size: 1.4em;
+                background-color: var(--color-1);
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                color: var(--background-1);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                  transform: scale(1.2);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .about__target {
+      .row {
+        padding-top: 0;
+        .image {
+          background-image: url("../../../Assets/Image/background2.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 50vh;
+          border-radius: 10px;
+          border: 2px solid #555;
+        }
+        .target {
+          padding: 20px;
+          .title {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 2px 2px 2px #000;
+            text-align: center;
+            color: var(--color-1);
+          }
+          .desc {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            .list {
+              list-style-type: none;
+              line-height: 2;
+              .list-item {
+                text-align: justify;
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .about-container {
+    .row {
+      .about__title {
+        text-align: center;
+      }
+      .about__intro {
+        .row {
+          flex-direction: column;
+          .image-intro {
+            display: none;
+          }
+          .description {
+            // background-image: url('../../');
+            background-color: var(--color-1);
+            border-radius: 10px;
+            padding: 20px 0;
+            .header {
+              color: var(--color-3);
+            }
+            .footer {
+              a {
+                .btn-download-cv {
+                  background-color: var(--color-3);
+                  color: #555;
+                  border: 1px solid #000;
+                }
+              }
+            }
+          }
+        }
+      }
+      .about__target {
+        .row {
+          .target {
+            .title {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 739px) {
+  .about-container {
+    .row {
+      .about__title {
+        text-align: center;
+      }
+      .about__intro {
+        .row {
+          flex-direction: column;
+          .image-intro {
+            display: none;
+          }
+          .description {
+            // background-image: url('../../');
+            background-color: var(--color-1);
+            border-radius: 10px;
+            padding: 20px 0;
+            .header {
+              color: var(--color-3);
+            }
+            .footer {
+              a {
+                .btn-download-cv {
+                  background-color: var(--color-3);
+                  color: #555;
+                  border: 1px solid #000;
+                }
+              }
+            }
+          }
+        }
+      }
+      .about__target {
+        .row {
+          .target {
+            .title {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

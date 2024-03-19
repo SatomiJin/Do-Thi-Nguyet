@@ -1,0 +1,101 @@
+.introduce-container {
+  .row {
+    margin-bottom: 3em;
+    align-items: center;
+    .intro-content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      .title {
+        font-size: 2em;
+        font-weight: 600;
+      }
+      .intro {
+        font-size: 1.2em;
+        // color: #555;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+      .social {
+        margin-top: 10px;
+        font-size: xx-large;
+        i {
+          color: #000;
+          margin-right: 15px;
+          transition: all 0.3s linear;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .intro-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image {
+        background-image: url("../../../Assets/Image/dothinguyent.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+        width: 50vh;
+        border: 2px solid #000;
+        border-radius: 50%;
+        animation: imageAnimate 9s ease-in-out infinite;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes imageAnimate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .introduce-container {
+    margin-top: 10vh !important;
+    .row {
+      flex-direction: column-reverse;
+      .intro-content {
+        text-align: center;
+      }
+      .intro-image {
+        .image {
+          width: 40vh;
+          height: 40vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 739px) {
+  .introduce-container {
+    margin-top: 5vh !important;
+    .row {
+      flex-direction: column-reverse;
+      .intro-image {
+        .image {
+          width: 30vh;
+          height: 30vh;
+        }
+      }
+      .intro-content {
+        text-align: center;
+      }
+    }
+  }
+}
