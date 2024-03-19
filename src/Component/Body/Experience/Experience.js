@@ -4,12 +4,15 @@ function Experience() {
   return (
     <div className="experience-container grid wide" id="exp">
       <div className="row">
-        <div className="experience-title col l-2 m-4 m-o-4 c-6 c-o-3">Kinh Nghiệm</div>
+        <div data-aos="fade-left" data-aos-duration="1000" className="experience-title col l-2 m-4 m-o-4 c-6 c-o-3">
+          Kinh Nghiệm
+        </div>
         {constant &&
           constant.experience.length > 0 &&
           constant.experience.map((item, index) => {
+            let typeAos = (index + 1) % 2 === 0 ? "fade-right" : "fade-left";
             return (
-              <div key={index} className="experience-content col grid l-12 m-10 m-o-1 c-12">
+              <div data-aos={typeAos} key={index} className="experience-content col grid l-12 m-10 m-o-1 c-12">
                 <div className="row" style={{ flexDirection: (index + 1) % 2 === 0 && "row-reverse" }}>
                   <div className="image-ex col l-5 m-12 c-12">
                     <div className="image" style={{ backgroundImage: `url("${item.image}")` }}></div>
